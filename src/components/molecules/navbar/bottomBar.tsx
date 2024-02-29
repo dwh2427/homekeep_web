@@ -102,14 +102,14 @@ const BottomBar = () => {
         </Grid2>
         {NAVIGATIONS.map(({ title, children }) => {
           return (
-            <Grid2 container xs={2} alignItems={'flex-start'}>
+            <Grid2 key={title} container xs={2} alignItems={'flex-start'}>
               {/* <Grid2 container> */}
               <Grid2 mb={1.5} xs={12}>
                 <Typography color={'primary.dark'} fontWeight={700}>{title}</Typography>
               </Grid2>
               {children.map(({ title }) => {
                 return (
-                  <Grid2 xs={12}>
+                  <Grid2 key={title} xs={12}>
                     <Typography color={'primary.dark'} fontWeight={300}>{title}</Typography>
                   </Grid2>
                 );

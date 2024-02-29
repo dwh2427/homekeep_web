@@ -42,7 +42,7 @@ const MenuExpanded = (props: Props) => {
       <Grid2 spacing={2} container>
         {MENU_LIST.services.map((item) => {
           return (
-            <Grid2>
+            <Grid2 key={item.title}>
               <Box p={2} borderRadius={0.5}>
                 {item.children.map((item)=>{
                     return(item.title)

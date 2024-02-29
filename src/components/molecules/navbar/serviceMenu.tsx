@@ -77,7 +77,7 @@ function ServiceMenu(props: Props) {
           <Grid2 spacing={4} container>
             {menuList?.items?.map((item) => {
               return (
-                <Grid2>
+                <Grid2 key={item.title}>
                   <Box
                     borderRadius={0.5}
                     padding={3}
@@ -89,7 +89,7 @@ function ServiceMenu(props: Props) {
 
                     {item?.items?.map((item) => {
                       return (
-                        <div style={{ marginTop: 10 }}>
+                        <div key={item.title} style={{ marginTop: 10 }}>
                           <Typography color={"primary.dark"}>
                             {item.title}
                           </Typography>
