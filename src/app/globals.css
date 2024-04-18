@@ -1,8 +1,11 @@
 @font-face {
-  font-family: "iowan_old";   /*Can be any text*/
-  src: 
-  /* url("../../public/fonts/bitstream_iowan_old_style_bt.ttf") format("truetype"), */
-  url("../../public/fonts/BitstreamIowanOldStyleBoldBT.ttf");
+  font-family: "iowan_old";
+  src: url("../../public/fonts/bitstream-iowan-old-style-black-bt-586c36e930225.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "lato_black";
+  src: url("../../public/fonts/Lato-Black.ttf") format("truetype");
 }
 :root {
   --max-width: 1100px;

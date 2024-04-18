@@ -36,9 +36,9 @@ const Navbar = () => {
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const toogleMenuClick = useCallback(
-     (event: React.MouseEvent<HTMLButtonElement>) => {
-      console.log(focusedId)
+  const toggleMenuClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      console.log(focusedId);
       if (event.currentTarget.id === focusedId) {
         setFocusedId("");
         setAnchorEl(null);
@@ -55,9 +55,26 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar elevation={trigger || open ? 4 : 0} sx={{ background: "#fff" }}>
-        <Container maxWidth="xl">
-          <Toolbar
+      <AppBar
+        elevation={trigger || open ? 4 : 0}
+        sx={{
+          background: "#fff",
+          boxShadow: "0px 13.01px 32.52px 0px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Container
+          maxWidth={false}
+          sx={{
+            maxWidth: "1665px",
+            maxHeight: "111px",
+            paddingY: { xs: "10px", sm: "20px", lg: "26.02px" },
+            paddingX: { xs: "20px", sm: "40px", lg: "85px" },
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          {/* <Toolbar
             sx={(theme) => {
               return {
                 [theme.breakpoints.down("lg")]: {
@@ -65,68 +82,47 @@ const Navbar = () => {
                   paddingRight: 0,
                 },
                 [theme.breakpoints.up("lg")]: {
-                  paddingLeft: 4,
-                  paddingRight: 4,
+                  justifyContent: "space-between",
+                  alignItems: "center",
                 },
-                justifyContent: "space-between",
-                padding: 1,
               };
             }}
-          >
-            <Image
-              sx={{}}
-              src="/assets/LogoDual.svg"
-              alt="Next.js Logo"
-              width={"20%"}
-              style={{ minWidth: 120 }}
-            />
-            {/* <img /> */}
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", md: "flex" },
-                justifyContent: "space-evenly",
-              }}
-            >
-              {NAVBAR_HEADERS.map((item) => (
-                <Button
-                  endIcon={item?.items && <KeyboardArrowDown />}
-                  key={item.title}
-                  onClick={item?.items && toogleMenuClick}
-                  // onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "primary.dark",
-                  }}
-                  variant="text"
-                  id={item.title}
-                >
-                  {item.title}
-                </Button>
-              ))}
-            </Box>
-            <Grid2 container spacing={{ lg: 2, xl: 3 }} alignItems={"center"}>
-              <Grid2>
-                <Button
-                  sx={{
-                    display: { xs: "none", md: "flex" },
-                    color: "primary.dark",
-                  }}
-                  variant="text"
-                >
-                  Log in
-                </Button>
-              </Grid2>
-              <Grid2>
-                <Button variant="contained">Get Started</Button>
-              </Grid2>
-              <Grid2 sx={{ display: { md: "none", xs: "flex" } }}>
-                <IconButton onClick={toggleDrawer}>
-                  <Menu sx={{ color: "primary.dark" }} />
-                </IconButton>
-              </Grid2>
+          > */}
+          <Image
+            sx={{
+              width: { xs: "175px", sm: "200px", md: "230px", xl: "276.73px" },
+              height: { xs: "0", xl: "59px" },
+            }}
+            src='/assets/Logo2.svg'
+            alt='Next.js Logo'
+          />
+
+          <Grid2 container alignItems={"center"}>
+            <Grid2>
+              <Button
+                variant='contained'
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  paddingY: "20px",
+                  paddingX: "40px",
+                  fontWeight: "900",
+                  width: "191px",
+                  height: "62px",
+                  whiteSpace: "nowrap",
+                  scale: { xs: "0.9", lg: "initial" },
+                }}
+                style={{ fontSize: "18px" }}
+              >
+                Free Estimate
+              </Button>
             </Grid2>
-          </Toolbar>
+            <Grid2 sx={{ display: { md: "none", xs: "flex" } }}>
+              <IconButton onClick={toggleDrawer}>
+                <Menu sx={{ color: "primary.dark", scale: { sm: "1.5" } }} />
+              </IconButton>
+            </Grid2>
+          </Grid2>
+          {/* </Toolbar> */}
         </Container>
       </AppBar>
       <DrawerMenu open={isDrawerOpen} toggleDrawer={toggleDrawer} />

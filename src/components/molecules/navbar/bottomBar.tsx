@@ -1,3 +1,4 @@
+import Image from "@/components/atoms/image/image";
 import { ArrowCircleRight, KeyboardArrowRight } from "@mui/icons-material";
 import {
   Box,
@@ -10,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { start } from "repl";
 
 const NAVIGATIONS = [
   {
@@ -40,86 +42,77 @@ const NAVIGATIONS = [
 
 const BottomBar = () => {
   return (
-    <Box p={{ xs: 2, md: 8 }} bgcolor={"secondary.main"}>
-      <Container maxWidth={"md"}>
-        <Typography
-          textAlign={"center"}
-          fontWeight={900}
-          fontFamily={"iowan_old"}
-          variant="h2"
-          color={"primary.dark"}
-        >
-          Save the pain... Your home made easy is just a step away
-        </Typography>
-      </Container>
+    <Box padding={"50px 32.52px"} bgcolor={"secondary.main"} marginTop={"50px"}>
       <Box
-        borderRadius={0.5}
-        my={5}
-        justifyContent={"space-between"}
-        alignItems={"center"}
-        bgcolor={"primary.main"}
-        p={{ xs: 3, md: 10 }}
-        flexWrap={"wrap"}
-        display={"flex"}
+        maxWidth={"1265.66px"}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginX: "auto",
+        }}
       >
         <Typography
           textAlign={"center"}
           fontWeight={900}
-          color={"white"}
-          variant="h5"
+          fontFamily={"iowan_old"}
+          variant='h2'
+          fontSize={{xs:'4rem',lg:80}}
+          color={"primary.dark"}
+          lineHeight={'90px'}
         >
-          Join our newsletter
+          Book your painting project today →
         </Typography>
-        <Box
+        <Button
+          variant='contained'
           sx={{
-            px: 4,
-            backgroundColor: "white",
-            borderRadius: 0.5,
-            alignItems: "center",
-            display: "flex",
-            minWidth: "35%",
+            backgroundColor: "#038732",
+            paddingY: "20px",
+            paddingX: "40px",
+            width: "221px",
+            height: "62px",
+            borderRadius: "100px",
+            color:'#FEFFF8',
+            whiteSpace: "nowrap",
+            fontWeight: "900",
+            fontSize: "18px",
+            lineHeight: "22px",
+            margin: "0 auto",
+            marginTop: "41.63px",
           }}
         >
-          <InputBase sx={{ py: 2.5, flex: 1 }} placeholder="Enter Email" />
-          <IconButton sx={{ backgroundColor: "primary.main", color: "white" }}>
-            <KeyboardArrowRight />
-          </IconButton>
-        </Box>
+          Get Free Estimate
+        </Button>
       </Box>
-      <Grid2 mb={5} container alignItems={'flex-start'}>
-        <Grid2 xs={2}>
-          <Box>
-            <Typography fontWeight={900} color={"primary.dark"}>
-              Contact
-            </Typography>
-          </Box>
-          <Box mt={2.5} mb={1}>
-            <Button variant="contained">Call us</Button>
-          </Box>
-          <Box>
-            <Button variant="contained">Email us</Button>
-          </Box>
-        </Grid2>
-        {NAVIGATIONS.map(({ title, children }) => {
-          return (
-            <Grid2 key={title} container xs={2} alignItems={'flex-start'}>
-              {/* <Grid2 container> */}
-              <Grid2 mb={1.5} xs={12}>
-                <Typography color={'primary.dark'} fontWeight={700}>{title}</Typography>
-              </Grid2>
-              {children.map(({ title }) => {
-                return (
-                  <Grid2 key={title} xs={12}>
-                    <Typography color={'primary.dark'} fontWeight={300}>{title}</Typography>
-                  </Grid2>
-                );
-              })}
-              {/* </Grid2> */}
-            </Grid2>
-          );
-        })}
-      </Grid2>
-      <Divider/>
+      <Divider
+        sx={{ marginY: "2rem", marginX: "auto", maxWidth: "1495.9px" }}
+      />
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        sx={{
+          marginX: "auto",
+          maxWidth: "1444px",
+          border: "5px",
+          // paddingLeft: "30px",
+        }}
+      >
+        <Image
+          sx={{ width: "276.73px", height: "59px" }}
+          src='/assets/Logo2.svg'
+          alt='Next.js Logo'
+        />
+        <Typography
+          fontWeight={700}
+          fontFamily={"lato"}
+          color={"primary.dark"}
+          mt={"41.63px"}
+          fontSize={'20.81px'}
+          lineHeight={"74.28px"}
+        >
+          © 2024 HomeSet Pty Ltd
+        </Typography>
+      </Box>
     </Box>
   );
 };

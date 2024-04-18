@@ -1,20 +1,20 @@
 export const HOME_PAGE_FEATURES_LIST = [
   {
-    title: "Repairs and maintenance",
+    title: "Interior Painting",
     subtitle:
-      "Cleaning - gardens, maintenance odds and ends around the home, car cleaning etc",
-    imageSource: "./assets/home_repair_and_maintaince.png",
+      "Trust in our expertise to revitalize your home's interiors, as we combine years of experience with top-of-the-line materials to deliver unmatched quality and customer satisfaction with every brushstroke.",
+    imageSource: "./assets/interior_painting.png",
   },
   {
-    title: "Prevention",
+    title: "Exterior Painting",
     subtitle:
-      "We save you by staying on top of your drainage, waterproofing and facade maintenance that could bite you in a storm.",
-    imageSource: "./assets/home_prevention.png",
+      "Whether you're looking to refresh your siding, revitalize your trim, or give your front door a vibrant makeover, our exterior painting can breathe new life into your home's exterior.",
+    imageSource: "./assets/exterior_painting.png",
   },
   {
-    title: "Repairs and maintenance",
+    title: "Cabinet Finishing",
     subtitle:
-      "Decks, new bathrooms, extensions, etc",
-    imageSource: "./assets/home_renovations.png",
+      "Unleash the full potential of your kitchen or cabinetry with our expert cabinet finishing services. Whether you desire a modern update or a timeless classic look, our skilled craftsmen will transform your cabinets into stunning focal points that truly define your space.",
+    imageSource: "./assets/cabinet_finishing.png",
   },
 ];

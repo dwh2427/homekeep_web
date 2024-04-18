@@ -4,7 +4,6 @@ import "@fontsource/lato/100.css";
 import "@fontsource/lato/300.css";
 import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
-// import '@fontsource/lato/900.css';
 import "./globals.css";
 import Navbar from "../components/molecules/navbar/navbar";
 import MaterialThemeProvider from "../components/theme/materialThemeProvider";
@@ -23,13 +22,13 @@ export default function RootLayout({
   // React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         <MaterialThemeProvider>
           <StyledEngineProvider injectFirst>
             <Navbar />
           </StyledEngineProvider>
-          <Box mt={{xs:8, md:8, lg:10}}>{children}</Box>
+          <Box>{children}</Box>
           <BottomBar />
         </MaterialThemeProvider>
       </body>
